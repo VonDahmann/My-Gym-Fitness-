@@ -1,0 +1,377 @@
+/* ====== RESET & VARIABLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #cfdce8;
+  --accent: #143140;
+  --bg: #ff8c42;
+  --text: #ffffff;
+  --light: #f4f4f4; /* لون فاتح للنصوص */
+  --teal: #2c5d75; /* لون للحدود */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+}
+
+/* ====== BODY & TYPOGRAPHY ====== */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.logot,
+.navbar a {
+  font-family: "Oswald", sans-serif !important;
+  color: var(--accent) !important;
+  text-decoration: none;
+}
+
+/* ====== HEADER & NAVBAR ====== */
+header {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid var(--accent);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  font-weight: bold;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.15rem;
+  background-color: var(--accent);
+  left: 0;
+  bottom: -0.3rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: var(--light) !important;
+}
+
+.navbar a.active {
+  color: var(--light) !important;
+  border-bottom: 0.15rem solid var(--light);
+}
+
+/* ====== PAGE BANNER ====== */
+.page-banner {
+  width: 100%;
+  height: 320px;
+  background:
+    linear-gradient(rgba(5, 63, 92, 0.75), rgba(5, 63, 92, 0.75)),
+    url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop)
+      center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 3px solid var(--accent);
+}
+
+.page-banner h2 {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+/* ====== MEMBERSHIP PLANS ====== */
+#plans {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: var(--space-xl) 5%;
+  align-items: stretch;
+}
+
+#plans > h2 {
+  grid-column: 1/-1;
+  font-size: 3rem;
+  color: var(--accent) !important;
+  margin-bottom: -1rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+#plans > p {
+  grid-column: 1/-1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--teal);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* تعديل الخلفية إلى الأزرق الغامق المباشر */
+#plans article {
+  background-color: #143140 !important;
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  border: 1.5px solid #2c5d75;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+
+#plans article img {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 100px;
+}
+#plans article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* التعديل الموصى به برتقالي بارز */
+#plans article.recommended {
+  border: 2px solid #ff8c42 !important;
+}
+
+#plans article.recommended::after {
+  content: "RECOMMENDED";
+  position: absolute;
+  top: 18px;
+  right: -30px;
+  background: var(--accent);
+  color: var(--primary);
+  font-family: "Oswald", sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.3rem 2.8rem;
+  transform: rotate(45deg);
+}
+
+/* العناوين بالبرتقالي */
+#plans h3 {
+  color: #ff8c42 !important;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+/* المميزات بالبرتقالي */
+dt {
+  font-weight: bold;
+  color: #ff8c42 !important;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+/* نصوص بيضاء واضحة */
+#plans article p,
+dd,
+#plans ul li {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+dl {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+dd {
+  border-left: 2px solid var(--teal);
+  padding-left: 5px;
+  margin: 0.2rem 0 0;
+}
+
+#plans ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+#plans ul li {
+  padding: 0.4rem 0;
+  position: relative;
+}
+#plans ul li::before {
+  content: "✓";
+  color: #ff8c42 !important;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* ====== REGISTRATION FORM ====== */
+#register {
+  padding: var(--space-xl) 5%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+#register > h2{
+  grid-column: 1/-1;
+  font-size: 3rem;
+  color: var(--accent) !important;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+#register > p {
+  grid-column: 1/-1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--teal);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+#register label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important; /* مسافة بين الدائرة والنص */
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: white; /* لكي يظهر النص فوق الخلفية الغامقة */
+}
+#register input[type="radio"], 
+#register input[type="checkbox"] {
+    width: auto !important;
+    margin-top: 0 !important;
+}
+form {
+  background-color: var(--accent);
+  border-radius: 14px;
+  border: 1.5px solid var(--teal);
+  padding: 2.5rem;
+}
+fieldset {
+  border: 1px solid var(--teal);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+legend {
+  font-family: "Oswald", sans-serif;
+  color: var(--bg);
+  padding: 0 10px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--teal);
+  border: 1.5px solid var(--teal);
+  border-radius: 8px;
+  color: var(--primary);
+  margin-top: 10px;
+}
+
+button[type="submit"] {
+  width:100%;
+  padding: 1rem;
+  background-color: var(--bg);
+  color: var(--primary);
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* ====== PAYMENT ====== */
+#payment {
+  padding: 3rem 5%;
+  max-width: 860px;
+  margin: 2rem auto;
+  background-color: var(--primary);
+  border-radius: 14px;
+  text-align: center;
+}
+#payment > h2 {
+  grid-column: 1/-1;
+  font-size: 3rem;
+  color: var(--accent) !important;
+  margin-bottom: 0.8rem;
+  margin-top: -3rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+#payment > p {
+  grid-column: 1/-1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--teal);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+#payment ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0;
+  cursor: pointer;
+}
+#payment li {
+  background: var(--accent);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (min-width: 768px) {
+  #payment ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #plans {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

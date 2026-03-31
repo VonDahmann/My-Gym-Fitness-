@@ -1,0 +1,118 @@
+/* ====== CSS Variables ====== */
+:root {
+  --primary: #cfdce8;
+  --accent: #143140;
+  --bg: #ff8c42;
+  --text: #ffffff;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+}
+/* ===== Hero Section ===== */
+.hero {
+  height: 90vh;
+  width: 100%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://wallpaperbat.com/img/872385-gym-bodybuilding-wallpaper-top-free-gym-bodybuilding-background.jpg);
+  background-size: cover;
+  border: 1px solid var(--bg);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text);
+}
+.www {
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 1rem;
+  word-spacing: 1px;
+  color: var(--bg);
+}
+.ppp {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+/*==== CTA button ====*/
+.but {
+  text-decoration: none;
+  background-color: var(--accent);
+  color: var(--bg);
+  padding: 0.9rem 2.2rem;
+  border-radius: 0.7rem;
+  padding: 15px 30px;
+  transition: 0.5s;
+  font-weight: bold;
+  box-shadow: #ff7b00;
+  cursor: pointer;
+}
+.but:hover {
+  color: var(--text);
+}
+/* ==== Facilities and Membership Sections ==== */
+#facilities,
+#membership {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding: 4rem 5%;
+  margin: 0 auto;
+  text-align: center;
+}
+#facilities h2,
+#membership h2 {
+  grid-column: 1 / -1;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0px;
+  color: var(--accent);
+}
+#facilities article,
+#membership article {
+  background-color: var(--accent);
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+}
+#facilities article:hover,
+#membership article:hover {
+  transform: translateY(-7px);
+}
+#facilities h3,
+#membership h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--bg);
+}
+#facilities p,
+#membership li {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+#facilities article img {
+  height: 180px;
+  width: 100%;
+  padding: 1rem 1%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+#membership article img {
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  #facilities,
+  #membership {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership Page</title>
+    <link rel="stylesheet" href="membership.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="logo.png"
+          alt="My Gym Fitness Logo"
+          class="logo_img"
+          width="80px"
+        />
+        <h1 class="logot">My Gym Fitness</h1>
+      </div>
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="membership.html" class="active">Membership</a></li>
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Membership Plans Section -->
+      <section id="plans">
+        <h2>Choose Your Membership Plan</h2>
+        <p>
+          Select the plan that fits your goals and budget. All plans include
+          full gym access.
+        </p>
+        <article class="bronz">
+          <img
+            class="bronze"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Bronze_square.svg/960px-Bronze_square.svg.png?_=20160910003248"
+            width="100px"
+          />
+          <h3>Bronze Plan</h3>
+          <p><strong>Monthly</strong> — Best for beginners</p>
+          <dl>
+            <dt>Access</dt>
+            <dd>Basic gym equipment (Cardio + Weights)</dd>
+            <dt>Locker Rooms</dt>
+            <dd>Full use of locker rooms and showers</dd>
+            <dt>Trainer</dt>
+            <dd>One introductory session with a trainer</dd>
+            <dt>Classes</dt>
+            <dd>Not included</dd>
+            <dt>Pool</dt>
+            <dd>Not included</dd>
+          </dl>
+          <ul>
+            <li>Access to basic gym equipment (Cardio + Weights).</li>
+            <li>Use of locker rooms and showers.</li>
+            <li>One introductory session with a trainer.</li>
+          </ul>
+        </article>
+
+        <article class="silver">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Silver_square.svg/500px-Silver_square.svg.png"
+            width="100px"
+          />
+          <h3>Silver Plan</h3>
+          <p><strong>Quarterly</strong> — Most popular choice</p>
+          <dl>
+            <dt>Access</dt>
+            <dd>All Bronze plan benefits included</dd>
+            <dt>Classes</dt>
+            <dd>Unlimited fitness classes (CrossFit, Yoga, HIIT)</dd>
+            <dt>Trainer</dt>
+            <dd>Limited personal trainer sessions (4/month)</dd>
+            <dt>Pool</dt>
+            <dd>Swimming pool access</dd>
+            <dt>Nutrition</dt>
+            <dd>Basic nutrition tips booklet</dd>
+          </dl>
+          <ul>
+            <li>All Bronze plan benefits.</li>
+            <li>Unlimited fitness classes (CrossFit, Yoga, HIIT).</li>
+            <li>Limited personal trainer sessions.</li>
+            <li>Swimming pool access.</li>
+          </ul>
+        </article>
+
+        <article class="gold">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Gold_square.svg/500px-Gold_square.svg.png"
+            width="100px"
+          />
+          <h3>Gold Plan</h3>
+          <p><strong>Annual</strong> — Best value for serious athletes</p>
+          <dl>
+            <dt>Access</dt>
+            <dd>All Silver plan benefits included</dd>
+            <dt>Hours</dt>
+            <dd>24/7 gym access, every day of the year</dd>
+            <dt>Nutrition</dt>
+            <dd>Full nutrition program with a free protein drink</dd>
+            <dt>Trainer</dt>
+            <dd>Unlimited personal trainer sessions</dd>
+            <dt>Priority</dt>
+            <dd>Priority class booking and VIP locker</dd>
+          </dl>
+          <ul>
+            <li>All Silver plan benefits.</li>
+            <li>24/7 gym access.</li>
+            <li>Nutrition program with a free protein drink.</li>
+            <li>Unlimited personal trainer sessions.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Registration Form Section -->
+      <section id="register">
+        <h2>Register Now</h2>
+        <p>Fill in the form below to create your membership account.</p>
+
+        <form action="#" method="POST">
+          <!-- Personal Information Fieldset -->
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full_name"
+              placeholder="e.g. Ali Benali"
+              required
+            />
+
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g. ali@email.com"
+              required
+            />
+
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="e.g. +213 55 123 456"
+              required
+            />
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required />
+          </fieldset>
+
+          <!-- Plan Selection Fieldset -->
+          <fieldset>
+            <legend>Select Your Plan</legend>
+
+            <label>
+              <input type="radio" name="plan" value="bronze" required />
+              Bronze Plan — Monthly
+            </label>
+
+            <label>
+              <input type="radio" name="plan" value="silver" />
+              Silver Plan — Quarterly
+            </label>
+
+            <label>
+              <input type="radio" name="plan" value="gold" />
+              Gold Plan — Annual
+            </label>
+          </fieldset>
+
+          <!-- Additional Info Fieldset -->
+          <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="goals">Fitness Goals (optional)</label>
+            <textarea
+              id="goals"
+              name="goals"
+              rows="4"
+              placeholder="Tell us about your fitness goals..."
+            ></textarea>
+
+            <label for="hear-about">How did you hear about us?</label>
+            <select id="hear-about" name="hear_about">
+              <option value="">-- Select an option --</option>
+              <option value="social-media">Social Media</option>
+              <option value="friend">Friend / Family</option>
+              <option value="google">Google Search</option>
+              <option value="flyer">Flyer / Poster</option>
+              <option value="other">Other</option>
+            </select>
+          </fieldset>
+
+          <!-- Terms & Submit -->
+          <fieldset>
+            <legend>Terms &amp; Conditions</legend>
+
+            <label>
+              <input type="checkbox" name="terms" required />
+              I agree to the <a href="#">Terms and Conditions</a> and
+              <a href="#">Privacy Policy</a>.
+            </label>
+
+            <label>
+              <input type="checkbox" name="newsletter" />
+              Subscribe to our newsletter for updates and offers.
+            </label>
+          </fieldset>
+
+          <button type="submit">Submit Registration</button>
+        </form>
+      </section>
+
+      <!-- Payment Methods Section -->
+      <section id="payment">
+        <h2>Payment Methods</h2>
+        <p>
+          We accept the following payment methods at our front desk or online :
+        </p>
+        <div class="pay">
+          <ul>
+            <li>💳 Credit / Debit Card (Visa, MasterCard)</li>
+            <li>💵 Cash Payment (at the gym)</li>
+            <li>📱 Mobile Payment (BaridiMob / CCP)</li>
+            <li>🏦 Bank Transfer</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer Sections-->
+    <footer>
+      <section>
+        <h2>Contact Us</h2>
+        <ul>
+          <li>Email: MyGymFitness@gmail.com</li>
+          <li>Phone: +213 55 123 456</li>
+          <li>Address: Algeria, Constantine</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Follow Us</h2>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Opening Hours</h2>
+        <ul>
+          <li>(Sunday - Thursday): 06:00 AM - 10:00 PM</li>
+          <li>(Friday & Saturday): 08:00 AM - 12:00 PM</li>
+        </ul>
+      </section>
+      <p>© 2026 My Gym Fitness. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

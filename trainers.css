@@ -1,0 +1,179 @@
+:root {
+  --primary: #cfdce8;
+  --accent: #143140;
+  --bg: #ff8c42;
+  --text: #ffffff;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+}
+.tot {
+  height: 90vh;
+  width: 100%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://wallpaperbat.com/img/9706414-plank-position-at-gym.jpg);
+  background-size: cover;
+  border: 1px solid var(--bg);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text);
+}
+.hh {
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 1rem;
+  word-spacing: 1px;
+  color: var(--bg);
+}
+.pp{
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+#trainers-intro h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 3.5rem;
+    color: var(--bg); /* البرتقالي */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+#trainers-intro p {
+    font-size: 1.2rem;
+    color: var(--text);
+    max-width: 800px;
+    font-weight: bold;
+}
+
+/* ====== 3. شبكة المدربين (Trainers Grid) ====== */
+#trainers-grid {
+    padding: 4rem 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    background-color: var(--primary); /* الأزرق الفاتح للخلفية */
+}
+.kkk{
+   grid-column: 1/-1;
+  font-size: 3rem;
+  color: var(--accent) !important;
+  margin-bottom: -3rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+
+}
+
+/* بطاقة المدرب */
+.trainer-card {
+    background-color: var(--accent); /* خلفية غامقة للبطاقة */
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center; /* توحيد التوسيط */
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--bg); /* إطار برتقالي عند اللمس */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* صور المدربين الدائرية */
+.trainer-card figure img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50% !important; /* دائرية تماماً */
+    border: 4px solid var(--bg);
+    margin-bottom: 1rem;
+}
+
+.trainer-card h3 {
+    font-family: "Oswald", sans-serif;
+    color: var(--bg); /* اسم المدرب بالبرتقالي */
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.trainer-card p {
+    color: var(--text);
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.trainer-card address a {
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.ad{
+  text-decoration:underline;
+  color:var(--bg);
+}
+
+/* ====== 4. قسم العمل معنا (Work With Us) ====== */
+#work-with-us {
+    margin: 4rem auto;
+    padding: 3rem;
+    max-width: 900px;
+    background-color: var(--accent);
+    border-radius: 20px;
+    border: 2px solid var(--bg);
+    color: var(--text);
+}
+
+#work-with-us h2 {
+    font-family: "Oswald", sans-serif;
+    color: var(--bg);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#work-with-us ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+#work-with-us ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--bg);
+}
+
+#work-with-us a {
+    color: var(--bg);
+    font-weight: bold;
+    text-decoration: underline;
+}
+.www{
+   grid-column: 1/-1;
+  font-size: 3rem;
+  color: var(--accent) !important;
+  margin-bottom: -3rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+/* ====== 5. التجاوب ====== */
+@media (max-width: 768px) {
+    #trainers-intro h2 { font-size: 2.5rem; }
+    #trainers-grid { grid-template-columns: 1fr; }
+}

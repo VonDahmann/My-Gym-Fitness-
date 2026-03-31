@@ -1,0 +1,114 @@
+/* ====== Reset & Variables ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary: #cfdce8;
+    --accent: #143140; /* الأزرق الغامق */
+    --bg: #ff8c42;      /* البرتقالي */
+    --text: #ffffff;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--primary);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ====== Header & Navbar (الموحد) ====== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%; /* مسافة متوازنة */
+    background-color: var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--bg);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logot {
+    color: var(--bg) !important;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* حذفنا تنسيق الـ nav تماماً لأنه يسبب تضارب */
+nav {
+    display: block; 
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    font-family: "Oswald", sans-serif !important;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--bg) !important;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--primary) !important;
+}
+
+/* ====== Footer (المصلح) ====== */
+footer {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 3rem 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 2px solid var(--bg);
+}
+
+footer section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+footer h2 {
+    color: var(--bg);
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 1rem;
+}
+
+footer ul { list-style: none; padding: 0; }
+footer a { color: var(--text); text-decoration: none; }
+footer a:hover { color: var(--bg); }
+
+footer > p {
+    width: 100%;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+
+.logo_img {
+    background-color: #143140;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    padding: 5px;
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan Management</title>
+    <link rel="stylesheet" href="plan-management.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header><h1>Admin Plans</h1></header>
+
+    <div class="admin-wrapper">
+      <aside class="admin-sidebar">
+        <h2>Admin Panel</h2>
+        <nav>
+          <ul>
+            <li><a href="admin-dashboard.html">📊 Dashboard</a></li>
+            <li><a href="#">👥 Members</a></li>
+            <li><a href="#">📋 Classes</a></li>
+            <li><a href="#">💳 Subscriptions</a></li>
+            <li><a href="#">🏋️ Trainers</a></li>
+            <li><a href="#">📦 Orders</a></li>
+            <li><a href="admin-plans.html" class="active">📝 Plans</a></li>
+            <li><a href="#">✉️ Messages</a></li>
+            <li><a href="admin-login.html">🔒 Logout</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <div class="container">
+          <section>
+            <h2>Membership Plans</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Plan Name</th>
+                  <th>Price</th>
+                  <th>Duration</th>
+                  <th>Features</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bronze</td>
+                  <td>$20</td>
+                  <td>1 Month</td>
+                  <td>Gym Access</td>
+                  <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Silver</td>
+                  <td>$50</td>
+                  <td>3 Months</td>
+                  <td>Gym + Classes</td>
+                  <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <h2>Add New Plan</h2>
+          <section class="form-section">
+            <form>
+              <label>Plan Name</label>
+              <input type="text" placeholder="Enter plan name" />
+              <label>Price</label>
+              <input type="number" placeholder="Enter price" />
+              <label>Duration</label>
+              <input type="text" placeholder="Example: 1 Month" />
+              <label>Description</label>
+              <textarea placeholder="Write plan features"></textarea>
+              <button type="submit">Add Plan</button>
+            </form>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2026 My Gym Fitness. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

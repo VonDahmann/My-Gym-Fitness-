@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="admin-login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="admin-body">
+    <header>
+      <h1>Admin Login</h1>
+      <p>Please Enter Your Credentials To Access The Admin Panel.</p>
+    </header>
+
+    <main>
+      <section class="info">
+        <div class="login-header-wrapper"> 
+        <img src="logo.png" alt="Logo" class="logo_img_circular">
+        <h2 class="logot">My Gym Fitness</h2>
+    </div>    
+    </div>
+        <form method="post" action="#">
+          <div class="forma">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+
+          <br />
+
+          <div class="forma">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div class="form">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+        <p class="error">Invalid username or password.</p>
+        <!---uses in js --->
+      </section>
+
+      <section class="site">
+        <a href="index.html">← Return to main website</a>
+      </section>
+    </main>
+    <footer>
+      <p>© 2026 My Gym Fitness. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
