@@ -5,14 +5,14 @@
   --text: #ffffff;
 
   /* Derived tokens — all built from the 4 roots above */
-  --primary-light: #0d2d42;        /* lightened primary */
-  --primary-lighter: #0f3a55;      /* hover states */
-  --accent-solid: #1d2f35;         /* accent without alpha */
-  --accent-hover: #2b4a55;         /* accent hover */
-  --accent-bright: #1a8fcc;        /* bg-toned accent for borders/highlights */
-  --bg-dark: #063d64;              /* darkened bg */
-  --bg-light: #0e6faf;             /* lightened bg */
-  --bg-muted: rgba(10,93,152,.15); /* subtle bg tint */
+  --primary-light: #0d2d42;       
+  --primary-lighter: #0f3a55;      
+  --accent-solid: #1d2f35;         
+  --accent-hover: #2b4a55;         
+  --accent-bright: #1a8fcc;        
+  --bg-dark: #063d64;             
+  --bg-light: #0e6faf;             
+  --bg-muted: rgba(10,93,152,.15); 
   --border: rgba(255,255,255,.1);
   --shadow: rgba(3,22,32,.4);
 
@@ -33,6 +33,23 @@
   margin: 0;
   padding: 0;
 }
+.bor{
+header h1 {
+  color: var(--bg);
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 20px 0;
+}
+header p{
+  color: var(--text);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: -30px;
+}
+border: 2px solid var(--bg);
+
+}
 body {
   font-family: var(--font-body);
   background: var(--primary);
@@ -44,7 +61,7 @@ a {
   text-decoration: none;
   transition: color var(--transition);
 }
-h1, h2, h3, h4 {
+ h2, h3, h4 {
   font-family: var(--font-heading);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -59,29 +76,29 @@ h1, h2, h3, h4 {
 .admin-sidebar {
   width: 260px;
   min-width: 260px;
-  background: var(--primary);
+  background: #020d10;
   border-right: 2px solid var(--bg);
-  padding: var(--space-lg) 0;
-  position: sticky;
-  top: 67px;
-  height: calc(100vh - 67px);
-  overflow-y: auto;
+  height:237vh;      
+  padding-top: 20px;
 }
 .admin-sidebar h2 {
-  font-size: .75rem;
-  letter-spacing: 3px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
   color: var(--bg);
-  padding: 0 var(--space-md) var(--space-md);
-  border-bottom: 1px solid var(--primary-light);
-  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 .admin-sidebar nav ul li a {
   display: block;
-  padding: 10px var(--space-md);
-  color: rgba(255,255,255,.5);
-  font-size: .9rem;
-  border-left: 3px solid transparent;
-  transition: color var(--transition), background var(--transition), border-color var(--transition);
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  border-left: 4px solid transparent;
 }
 .admin-sidebar nav ul li a:hover,
 .admin-sidebar nav ul li a.active {
@@ -200,6 +217,8 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   cursor: pointer;
   transition: background var(--transition), color var(--transition);
+      border: 2px solid var(--bg);
+
 }
 #quick-actions button:hover {
   background: var(--bg);

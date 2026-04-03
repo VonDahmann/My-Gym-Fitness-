@@ -8,8 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-
+    <div class="bor">
+    <header> 
+            <h1>Dashboard Overview</h1>
+            <p>Welcome back, Admin. Here is a summary of today's activity.</p>
+            </div>
+</header>
 <!-- Admin Layout: Sidebar + Main Content -->
 <div class="admin-wrapper">
 
@@ -18,27 +22,21 @@
         <h2>Admin Panel</h2>
         <nav>
             <ul>
-                <li><a href="admin-dashboard.html" class="active">📊 Dashboard</a></li>
-                <li><a href="#">👥 Members</a></li>
-                <li><a href="#">📋 Classes</a></li>
-                <li><a href="#">💳 Subscriptions</a></li>
-                <li><a href="#">🏋️ Trainers</a></li>
-                <li><a href="#">📦 Orders</a></li>
-                <li><a href="admin-plans.html">📝 Plans</a></li>
-                <li><a href="#">✉️ Messages</a></li>
-                <li><a href="admin-login.html">🔒 Logout</a></li>
+                <li><a href="admin-dashboard.html" class="active" target="_blank">📊 Dashboard</a></li>
+                <li><a href="membership.html" target="_blank" >👥 Members</a></li>
+                <li><a href="classes.html"  target="_blank">📋 Classes</a></li>
+                <li><a href="index.html" target="_blank" >💳 Subscriptions</a></li>
+                <li><a href="trainers.html"  target="_blank">🏋️ Trainers</a></li>
+                <li><a href="contact.html" target="_blank" >📦 Orders</a></li>
+                <li><a href="plan-management.html"  target="_blank">📝 Plans</a></li>
+                <li><a href="contact.html" target="_blank" >✉️ Messages</a></li>
+                <li><a href="admin-login.html"  target="_blank">🔒 Logout</a></li>
             </ul>
         </nav>
     </aside>
 
     <!-- Main Dashboard Content -->
     <main class="admin-main">
-
-        <section id="dashboard-header">
-            <h2>Dashboard Overview</h2>
-            <p>Welcome back, Admin. Here is a summary of today's activity.</p>
-        </section>
-
         <!-- Summary Stats Section -->
         <section id="stats">
             <h2>Summary Statistics</h2>
