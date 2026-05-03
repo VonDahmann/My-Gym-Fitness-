@@ -36,78 +36,44 @@
         <h2>Fitness Sessions</h2>
         <p>Check Out Our Variety Of Gym Classes Now.</p>
       </div>
+    <div id="filters">
+      <!--Trainer-->
+      <select id="trainerFilter">
+        <option value="">All Trainers</option>
+      </select>
+      <!--Day-->
+      <div id="dayFilter">
+    <button class="aa" data-day="" class="active-filter">All Days</button>    <button class="aa" data-day="Sunday">Sunday</button>
+    <button class="aa" data-day="Monday">Monday</button>
+    <button class="aa" data-day="Tuesday">Tuesday</button>
+    <button class="aa" data-day="Wednesday">Wednesday</button>
+    <button class="aa" data-day="Thursday">Thursday</button>
+    <button class="aa" data-day="Friday">Friday</button>
+    <button class="aa" data-day="Saturday">Saturday</button>
+  </div>
+  <!-- Difficulty -->
+  <div id="difficultyFilter">
+    <button class="aa" data-difficulty="All" class="active-filter">All</button>    <button class="aa" data-difficulty="Beginner">Beginner</button>
+    <button class="aa" data-difficulty="Intermediate">Intermediate</button>
+    <button class="aa" data-difficulty="Advanced">Advanced</button>
+  </div>
+</div>
+    </div>
       <table>
         <caption class="caption">
           Available Gym Classes
         </caption>
         <thead>
           <tr>
-            <th>Class Name</th>
-            <th>Trainer</th>
-            <th>Day</th>
-            <th>Time</th>
-            <th>Duration</th>
-            <th>Difficulty Level</th>
+            <th id="nameHeader">Class Name</th>
+<th>Trainer</th>
+<th>Day</th>
+<th id="timeHeader">Time</th>
+<th id="durationHeader">Duration</th>
+<th>Difficulty Level</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><a href="#">Yoga</a></td>
-            <td>Sarah</td>
-            <td>Sunday</td>
-            <td>08:00 AM</td>
-            <td>1h15min</td>
-            <td class="beginner">Beginner</td>
-          </tr>
-          <tr>
-            <td><a href="#">CrossFit</a></td>
-            <td>Mohamed</td>
-            <td>Monday</td>
-            <td>05:00 PM</td>
-            <td>45min</td>
-            <td class="advanced">Advanced</td>
-          </tr>
-          <tr>
-            <td><a href="#">Hiit</a></td>
-            <td>Adam</td>
-            <td>Tuesday</td>
-            <td>06:00 PM</td>
-            <td>45min</td>
-            <td class="intermediate">Intermediate</td>
-          </tr>
-          <tr>
-            <td><a href="#">Swimming</a></td>
-            <td>Maria</td>
-            <td>Wednesday</td>
-            <td>05:30 PM</td>
-            <td>1h</td>
-            <td class="beginner">Beginner</td>
-          </tr>
-          <tr>
-            <td><a href="#">Strength Training</a></td>
-            <td>Sami</td>
-            <td>Thursday</td>
-            <td>06:00 PM</td>
-            <td>45min</td>
-            <td class="advanced">Advanced</td>
-          </tr>
-          <tr>
-            <td><a href="#">Stretching</a></td>
-            <td>Mina</td>
-            <td>Friday</td>
-            <td>08:00 AM</td>
-            <td>1h</td>
-            <td class="beginner">Beginner</td>
-          </tr>
-          <tr>
-            <td><a href="#">Boxing Fitness</a></td>
-            <td>Rami</td>
-            <td>Saturday</td>
-            <td>07:00 PM</td>
-            <td>1h30min</td>
-            <td class="intermediate">Intermediate</td>
-          </tr>
-        </tbody>
+        <tbody></tbody>
       </table>
       <!--uses in JS-->
       <section id="filter-note">
@@ -144,5 +110,6 @@
       </section>
       <p>© 2026 My Gym Fitness. All rights reserved.</p>
     </footer>
+    <script src="classes.js"></script>
   </body>
 </html>

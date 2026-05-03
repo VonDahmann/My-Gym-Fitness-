@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bor">
+      <header>
+        <h1>Dashboard Overview</h1>
+        <p>Welcome back, Admin. Here is a summary of today's activity.</p>
+      </header>
+    </div>
+    <!-- Admin Layout: Sidebar + Main Content -->
+    <div class="admin-wrapper">
+      <!-- Sidebar Navigation -->
+      <aside class="admin-sidebar">
+        <h2>Admin Panel</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="admin-dashboard.html" class="active" target="_blank"
+                >📊 Dashboard</a
+              >
+            </li>
+            <li><a href="membership.html" target="_blank">👥 Members</a></li>
+            <li><a href="classes.html" target="_blank">📋 Classes</a></li>
+            <li><a href="index.html" target="_blank">💳 Subscriptions</a></li>
+            <li><a href="trainers.html" target="_blank">🏋️ Trainers</a></li>
+            <li><a href="contact.html" target="_blank">📦 Orders</a></li>
+            <li><a href="plan-management.html" target="_blank">📝 Plans</a></li>
+            <li><a href="contact.html" target="_blank">✉️ Messages</a></li>
+            <li><a href="admin-login.html">🔒 Logout</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Dashboard Content -->
+      <main class="admin-main">
+        <!-- Summary Stats Section -->
+        <section id="stats">
+          <h2>Summary Statistics</h2>
+
+          <article class="stat-card">
+            <h3>Total Members</h3>
+            <p class="stat-number">248</p>
+            <p class="stat-label">Registered members</p>
+          </article>
+
+          <article class="stat-card">
+            <h3>Active Subscriptions</h3>
+            <p class="stat-number">185</p>
+            <p class="stat-label">Currently active plans</p>
+          </article>
+
+          <article class="stat-card">
+            <h3>Classes Today</h3>
+            <p class="stat-number">5</p>
+            <p class="stat-label">Scheduled for today</p>
+          </article>
+
+          <article class="stat-card">
+            <h3>Revenue This Month</h3>
+            <p class="stat-number">142,500 DZD</p>
+            <p class="stat-label">As of today</p>
+          </article>
+        </section>
+
+        <!-- Recent Registrations Table -->
+        <section id="recent-activity">
+          <h2>Recent Registrations</h2>
+          <p>Last 5 new member sign-ups.</p>
+          <table>
+            <caption>
+              New Member Registrations
+            </caption>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Plan</th>
+                <th>Registration Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Yacine Bouzid</td>
+                <td>yacine.b@email.com</td>
+                <td>Gold</td>
+                <td>2025-03-14</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Amira Khelil</td>
+                <td>amira.k@email.com</td>
+                <td>Silver</td>
+                <td>2025-03-13</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Karim Mansouri</td>
+                <td>karim.m@email.com</td>
+                <td>Bronze</td>
+                <td>2025-03-12</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Nadia Ferhat</td>
+                <td>nadia.f@email.com</td>
+                <td>Gold</td>
+                <td>2025-03-11</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Omar Tlemcani</td>
+                <td>omar.t@email.com</td>
+                <td>Silver</td>
+                <td>2025-03-10</td>
+                <td>Pending</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Today's Classes Table -->
+        <section id="todays-classes">
+          <h2>Today's Classes</h2>
+          <p>Classes scheduled for today with capacity info.</p>
+          <table>
+            <caption>
+              Today's Class Schedule
+            </caption>
+            <thead>
+              <tr>
+                <th>Class Name</th>
+                <th>Trainer</th>
+                <th>Time</th>
+                <th>Duration</th>
+                <th>Enrolled</th>
+                <th>Capacity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Yoga</td>
+                <td>Sarah</td>
+                <td>08:00 AM</td>
+                <td>1h15min</td>
+                <td>12</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>CrossFit</td>
+                <td>Mohamed</td>
+                <td>05:00 PM</td>
+                <td>45min</td>
+                <td>18</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>HIIT</td>
+                <td>Adam</td>
+                <td>06:00 PM</td>
+                <td>45min</td>
+                <td>10</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Zumba</td>
+                <td>Maria</td>
+                <td>05:30 PM</td>
+                <td>1h</td>
+                <td>14</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>Strength Training</td>
+                <td>Sami</td>
+                <td>06:00 PM</td>
+                <td>45min</td>
+                <td>8</td>
+                <td>12</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Quick Actions Section -->
+        <section id="quick-actions">
+          <h2>Quick Actions</h2>
+          <ul>
+            <li>
+              <button
+                type="button"
+                onclick="
+                  document
+                    .getElementById('memberForm')
+                    .scrollIntoView({ behavior: 'smooth' })
+                "
+              >
+                ➕ Add New Member
+              </button>
+            </li>
+            <li><button type="button">📅 Add New Class</button></li>
+            <li><button type="button">💳 Add New Plan</button></li>
+            <li><button type="button">🏋️ Add New Trainer</button></li>
+          </ul>
+        </section>
+        <section id="member-management">
+          <h2>Member Management</h2>
+
+          <form id="memberForm">
+            <input class="bb" type="hidden" id="memberIndex" />
+
+            <input
+              class="bb"
+              type="text"
+              id="name"
+              placeholder="Full Name"
+              required
+            />
+
+            <input
+              class="bb"
+              type="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+
+            <input
+              class="bb"
+              type="text"
+              id="phone"
+              placeholder="Phone Number"
+              required
+            />
+
+            <select id="plan" required>
+              <option value="Bronze">Bronze</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+            </select>
+
+            <input class="bb" type="date" id="joinDate" required />
+
+            <button class="ss" type="submit">Save Member</button>
+          </form>
+
+          <br />
+
+          <input
+            class="bb"
+            type="text"
+            id="searchInput"
+            placeholder="Search by name or email"
+          />
+
+          <select class="bb" id="planFilter">
+            <option value="All">All Plans</option>
+            <option value="Bronze">Bronze</option>
+            <option value="Silver">Silver</option>
+            <option value="Gold">Gold</option>
+          </select>
+
+          <p id="totalMembers"></p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Plan</th>
+                <th>Join Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody id="memberTableBody"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>© 2026 My Gym Fitness. All rights reserved.</p>
+    </footer>
+    <script src="admin-login.js"></script>
+  </body>
+</html>

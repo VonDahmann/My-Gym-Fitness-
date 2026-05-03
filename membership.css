@@ -1,4 +1,4 @@
-/* ====== RESET & VARIABLES ====== */
+/* RESET & VARIABLES */
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +10,8 @@
   --accent: #143140;
   --bg: #ff8c42;
   --text: #ffffff;
-  --light: #f4f4f4; /* لون فاتح للنصوص */
-  --teal: #2c5d75; /* لون للحدود */
+  --light: #f4f4f4;
+  --teal: #2c5d75;
   --space-xs: 8px;
   --space-sm: 16px;
   --space-md: 24px;
@@ -19,7 +19,7 @@
   --space-xl: 48px;
 }
 
-/* ====== BODY & TYPOGRAPHY ====== */
+/* BODY & TYPOGRAPHY  */
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--bg);
@@ -34,7 +34,7 @@ body {
   text-decoration: none;
 }
 
-/* ====== HEADER & NAVBAR ====== */
+/* HEADER & NAVBAR */
 header {
   background-color: var(--primary);
   display: flex;
@@ -89,7 +89,7 @@ header {
   border-bottom: 0.15rem solid var(--light);
 }
 
-/* ====== PAGE BANNER ====== */
+/* PAGE BANNER */
 .page-banner {
   width: 100%;
   height: 320px;
@@ -114,7 +114,7 @@ header {
   font-family: "Oswald", sans-serif;
 }
 
-/* ====== MEMBERSHIP PLANS ====== */
+/* MEMBERSHIP PLANS */
 #plans {
   display: grid;
   grid-template-columns: 1fr;
@@ -141,7 +141,6 @@ header {
   text-align: center;
 }
 
-/* تعديل الخلفية إلى الأزرق الغامق المباشر */
 #plans article {
   background-color: #143140 !important;
   border-radius: 15px;
@@ -169,7 +168,6 @@ header {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* التعديل الموصى به برتقالي بارز */
 #plans article.recommended {
   border: 2px solid #ff8c42 !important;
 }
@@ -188,7 +186,6 @@ header {
   transform: rotate(45deg);
 }
 
-/* العناوين بالبرتقالي */
 #plans h3 {
   color: #ff8c42 !important;
   font-size: 2rem;
@@ -197,7 +194,6 @@ header {
   text-transform: uppercase;
 }
 
-/* المميزات بالبرتقالي */
 dt {
   font-weight: bold;
   color: #ff8c42 !important;
@@ -206,7 +202,6 @@ dt {
   margin-top: 1rem;
 }
 
-/* نصوص بيضاء واضحة */
 #plans article p,
 dd,
 #plans ul li {
@@ -240,13 +235,13 @@ dd {
   margin-right: 8px;
 }
 
-/* ====== REGISTRATION FORM ====== */
+/* REGISTRATION FORM  */
 #register {
   padding: var(--space-xl) 5%;
   max-width: 860px;
   margin: 0 auto;
 }
-#register > h2{
+#register > h2 {
   grid-column: 1/-1;
   font-size: 3rem;
   color: var(--accent) !important;
@@ -263,17 +258,17 @@ dd {
   text-align: center;
 }
 #register label {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important; /* مسافة بين الدائرة والنص */
-    cursor: pointer;
-    margin-bottom: 10px;
-    color: white; /* لكي يظهر النص فوق الخلفية الغامقة */
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: white;
 }
-#register input[type="radio"], 
+#register input[type="radio"],
 #register input[type="checkbox"] {
-    width: auto !important;
-    margin-top: 0 !important;
+  width: auto !important;
+  margin-top: 0 !important;
 }
 form {
   background-color: var(--accent);
@@ -306,7 +301,7 @@ select {
 }
 
 button[type="submit"] {
-  width:100%;
+  width: 100%;
   padding: 1rem;
   background-color: var(--bg);
   color: var(--primary);
@@ -319,7 +314,7 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-/* ====== PAYMENT ====== */
+/* PAYMENT */
 #payment {
   padding: 3rem 5%;
   max-width: 860px;
@@ -363,7 +358,7 @@ button[type="submit"] {
   font-weight: bold;
 }
 
-/* ====== RESPONSIVE ====== */
+/* RESPONSIVE */
 @media (min-width: 768px) {
   #payment ul {
     grid-template-columns: repeat(2, 1fr);

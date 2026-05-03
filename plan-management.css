@@ -1,4 +1,4 @@
-/* ====== Reset & Variables ====== */
+/* Reset & Variables*/
 * {
   margin: 0;
   padding: 0;
@@ -20,13 +20,13 @@ body {
   line-height: 1.6;
 }
 
-/* ====== Layout Wrapper ====== */
+/* Layout Wrapper*/
 .admin-wrapper {
   display: flex; 
   align-items: flex-start;
 }
 
-/* ====== Sidebar ====== */
+/* Sidebar */
 .admin-sidebar {
   width: 260px;
   min-width: 260px;
@@ -67,7 +67,7 @@ body {
   border-left-color: var(--bg);
 }
 
-/* ====== Main Content ====== */
+/*  Main Content */
 main {
   flex-grow: 1;
   padding: 20px;

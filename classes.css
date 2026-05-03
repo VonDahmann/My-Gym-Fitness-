@@ -94,3 +94,57 @@ tbody tr:hover {
   padding: 1rem;
   border: 1px solid var(--primary);
 }
+#filters {
+  width: 75%;
+  margin: 20px auto;
+  padding: 30px;
+  background: var(--accent);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#trainerFilter {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid var(--bg);
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#dayFilter {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center !important;
+  background-color: var(--teal);
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--bg);
+  width: fit-content;
+}
+#difficultyFilter {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center !important;
+  background-color: var(--teal);
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--bg);
+}
+.aa {
+  cursor: pointer;
+  background-color: var(--light);
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid var(--bg);
+}
+.active-filter {
+  background-color: var(--bg) !important;
+  border: 2px solid var(--accent);
+}

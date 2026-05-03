@@ -1,4 +1,4 @@
-/* ====== Reset & Variables ====== */
+/*Reset & Variables */
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +6,8 @@
 }
 :root {
     --primary: #cfdce8;
-    --accent: #143140; /* الأزرق الغامق */
-    --bg: #ff8c42;      /* البرتقالي */
+    --accent: #143140; 
+    --bg: #ff8c42;      
     --text: #ffffff;
 }
 
@@ -18,12 +18,12 @@ body {
     line-height: 1.6;
 }
 
-/* ====== Header & Navbar (الموحد) ====== */
+/* Header & Navbar */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%; /* مسافة متوازنة */
+    padding: 10px 5%; 
     background-color: var(--accent);
     position: sticky;
     top: 0;
@@ -44,7 +44,7 @@ header {
     font-size: 1.8rem;
 }
 
-/* حذفنا تنسيق الـ nav تماماً لأنه يسبب تضارب */
+
 nav {
     display: block; 
 }
@@ -70,7 +70,7 @@ nav {
     color: var(--primary) !important;
 }
 
-/* ====== Footer (المصلح) ====== */
+/* Footer*/
 footer {
     background-color: var(--accent);
     color: var(--text);

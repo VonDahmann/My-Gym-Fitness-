@@ -23,30 +23,30 @@ header {
   padding: 2rem 1rem;
 }
 .login-header-wrapper {
-    display: flex !important;
-    flex-direction: row !important; 
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 3px !important;
-    margin-bottom: 25px !important;
-    width: 100%;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  margin-bottom: 25px !important;
+  width: 100%;
 }
 .logo_img_circular {
-    background-color: #143140 !important;
-    border-radius: 50% !important;
-    width: 80px !important;   
-    height: 80px !important;  
-    object-fit: cover !important;
-    padding: 5px !important;
-    display: block !important;
-    align-items: center !important;
+  background-color: #143140 !important;
+  border-radius: 50% !important;
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: cover !important;
+  padding: 5px !important;
+  display: block !important;
+  align-items: center !important;
 }
 .login-header-wrapper .logot {
-    color:var(--primary) !important; 
-    font-size: 2.2rem !important; 
-    font-weight: bold !important; 
-    margin: 0 !important; 
-    text-align: center;
+  color: var(--primary) !important;
+  font-size: 2.2rem !important;
+  font-weight: bold !important;
+  margin: 0 !important;
+  text-align: center;
 }
 header h1 {
   color: var(--bg);
@@ -133,7 +133,7 @@ input {
   margin-bottom: 1.5rem;
   border: 0.01px solid var(--primary);
 }
-.form button:hover{
+.form button:hover {
   background-color: var(--accent);
 }
 a {
