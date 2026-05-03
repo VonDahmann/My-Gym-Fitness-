@@ -375,3 +375,171 @@ button[type="submit"] {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ============================================================
+   JS-DRIVEN STYLES — validation, mini-cart, modal
+   ============================================================ */
+
+/* ── Inline error messages ── */
+.field-error,
+.plan-error,
+.terms-error {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ── "Select Plan" buttons on cards ── */
+.select-plan-btn {
+  margin-top: auto;
+  padding: 0.7rem 2rem;
+  background: var(--bg);
+  color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 1.5rem;
+}
+.select-plan-btn:hover {
+  background: #ff7020;
+  transform: scale(1.05);
+}
+
+/* ── Sticky Mini-Cart ── */
+.mini-cart {
+  position: fixed;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--text);
+  padding: 12px 28px;
+  border-radius: 14px 14px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 9999;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+  border: 1.5px solid var(--bg);
+  border-bottom: none;
+  transition: bottom 0.4s ease;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.mini-cart.visible {
+  bottom: 0;
+}
+.cart-icon {
+  font-size: 1.3rem;
+}
+.cart-plan-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  color: var(--bg);
+}
+.cart-plan-price {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.cart-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.cart-proceed {
+  background: var(--bg);
+  color: var(--accent);
+}
+.cart-proceed:hover {
+  background: #ff7020;
+}
+.cart-clear {
+  background: transparent;
+  color: #e74c3c;
+  border: 1.5px solid #e74c3c;
+}
+.cart-clear:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* ── Success Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+.modal-overlay.visible {
+  display: flex;
+}
+.modal-box {
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: modalPop 0.3s ease;
+}
+@keyframes modalPop {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--bg);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.modal-icon {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+.modal-box h3 {
+  font-family: "Oswald", sans-serif;
+  color: var(--bg);
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.modal-box p {
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+.modal-ok-btn {
+  padding: 0.6rem 2.5rem;
+  background: var(--bg);
+  color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.modal-ok-btn:hover {
+  background: #ff7020;
+}
