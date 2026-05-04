@@ -110,9 +110,23 @@ h4 {
 #membership article img {
   margin-bottom: 0.5rem;
 }
+/* RESPONSIVE */
+/* عندما تصبح الشاشة صغيرة (موبايل) */
 @media (max-width: 768px) {
-  #facilities,
-  #membership {
-    grid-template-columns: 1fr;
+  
+  /* 1. تصغير حجم النص الكبير في الواجهة */
+  .www { font-size: 2rem; }
+  .ppp { font-size: 1rem; }
+
+  /* 2. جعل مربعات المرافق والاشتراكات تظهر واحداً تلو الآخر (بدل 3 بجانب بعض) */
+  #facilities, #membership {
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+    padding: 1rem 5%;
+  }
+
+  /* 3. تقليل الحشو (Padding) داخل المربعات ليتناسب مع الشاشات الصغيرة */
+  #facilities article, #membership article {
+    padding: 1.5rem;
   }
 }

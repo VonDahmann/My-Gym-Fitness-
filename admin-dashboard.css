@@ -258,67 +258,6 @@ footer {
   font-size: 1.2rem;
   padding: 1rem;
 }
-/* ── Responsive ── */
-@media (max-width: 1023px) {
-  nav {
-    flex-direction: column;
-    gap: var(--space-sm);
-  }
-  ul.navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .admin-wrapper {
-    flex-direction: column;
-  }
-  .admin-sidebar {
-    width: 100%;
-    position: static;
-    height: auto;
-    padding: var(--space-sm);
-  }
-  .admin-sidebar nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-  .admin-sidebar nav ul li a {
-    border-left: none;
-    border-bottom: 3px solid transparent;
-    padding: var(--space-xs) var(--space-sm);
-  }
-  .admin-sidebar nav ul li a:hover,
-  .admin-sidebar nav ul li a.active {
-    border-left-color: transparent;
-    border-bottom-color: var(--bg);
-  }
-  #stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 767px) {
-  #stats {
-    grid-template-columns: 1fr;
-  }
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-  .admin-main {
-    padding: var(--space-sm);
-  }
-  #quick-actions ul {
-    flex-direction: column;
-  }
-  #quick-actions button {
-    width: 100%;
-  }
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-}
 .bb,
 #plan {
   background-color: var(--primary);
@@ -384,4 +323,93 @@ footer {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text);
+}
+/* == RESPONSIVE ==*/
+
+@media (max-width: 1024px) {
+  #stats {
+    grid-template-columns: repeat(2, 1fr); /* عرض كرتين في الصف بدلاً من 4 */
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-wrapper {
+    flex-direction: column; /* تحويل القائمة الجانبية لتصبح فوق المحتوى */
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: auto; /* إلغاء الارتفاع الثابت الكبير */
+    padding: 10px 0;
+    border-right: none;
+    border-bottom: 2px solid var(--bg);
+  }
+
+  .admin-sidebar h2 {
+    margin-bottom: 5px;
+  }
+
+  .admin-sidebar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .admin-sidebar nav ul li a {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .admin-sidebar nav ul li a:hover,
+  .admin-sidebar nav ul li a.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--bg);
+  }
+
+  .admin-main {
+    padding: var(--space-sm);
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #stats {
+    grid-template-columns: 1fr; /* كرت واحد في الصف للموبايل الصغير */
+  }
+
+  .admin-main section {
+    padding: var(--space-sm);
+  }
+
+  #quick-actions ul {
+    flex-direction: column;
+  }
+
+  #quick-actions button {
+    width: 100%; /* الأزرار تأخذ العرض الكامل */
+  }
+
+  /* جعل الجداول قابلة للتمرير الأفقي في الشاشات الصغيرة جداً */
+  .admin-main {
+    overflow-x: hidden; 
+  }
+  
+  .admin-main section {
+    overflow-x: auto; 
+  }
+
+  .chart-label {
+    width: 50px;
+    font-size: 0.7rem;
+  }
 }

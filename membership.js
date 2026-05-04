@@ -1,33 +1,11 @@
-/**
- * ============================================================
- *  membership.js — Membership Registration & Validation
- *  Part 3 of the Gym Management System
- * ============================================================
- *
- *  Features:
- *    1. Client-side form validation (blur + submit)
- *    2. Inline error messages, red/green borders
- *    3. Success modal on valid submission
- *    4. Plan selection mini-cart with sessionStorage
- *    5. "Select Plan" buttons on plan cards
- *    6. "Proceed to Register" scrolls & pre-fills the form
- * ============================================================
- */
-
 "use strict";
-
-/* ──────────────────────────────────────────────
-   PLAN DATA — prices & labels for the 3 tiers
-   ────────────────────────────────────────────── */
+/*PLAN DATA*/
 const PLANS = {
   bronze: { name: "Bronze Plan", period: "Monthly", price: "3,500 DZD/mo" },
   silver: { name: "Silver Plan", period: "Quarterly", price: "9,000 DZD/qtr" },
-  gold:   { name: "Gold Plan",   period: "Annual",    price: "30,000 DZD/yr" },
+  gold: { name: "Gold Plan", period: "Annual", price: "30,000 DZD/yr" },
 };
-
-/* ──────────────────────────────────────────────
-   DOM REFERENCES (cached after DOMContentLoaded)
-   ────────────────────────────────────────────── */
+/*DOM REFERENCES*/
 let form,
   fullNameInput,
   emailInput,
@@ -42,11 +20,6 @@ let form,
   cartClearBtn,
   successModal,
   modalCloseBtn;
-
-/* ──────────────────────────────────────────────
-   VALIDATION HELPERS
-   ────────────────────────────────────────────── */
-
 /**
  * showError — display an inline error message next to a field
  * @param {HTMLElement} field - the input element
@@ -54,7 +27,7 @@ let form,
  */
 function showError(field, message) {
   clearFeedback(field);
-  field.style.borderColor = "#e74c3c"; // red border
+  field.style.borderColor = "#e74c3c";
   const span = document.createElement("span");
   span.className = "field-error";
   span.textContent = message;
@@ -67,7 +40,7 @@ function showError(field, message) {
  */
 function showSuccess(field) {
   clearFeedback(field);
-  field.style.borderColor = "#2ecc71"; // green border
+  field.style.borderColor = "#2ecc71"; 
 }
 
 /**
@@ -80,9 +53,7 @@ function clearFeedback(field) {
   field.style.borderColor = "";
 }
 
-/* ── Individual field validators ── */
-
-/** validateFullName — required, min 3 chars, letters & spaces only */
+/* Individual field validators */
 function validateFullName() {
   const val = fullNameInput.value.trim();
   if (!val) {
@@ -117,15 +88,12 @@ function validateEmail() {
   showSuccess(emailInput);
   return true;
 }
-
-/** validatePhone — required, numeric, 8–15 digits */
 function validatePhone() {
   const val = phoneInput.value.trim();
   if (!val) {
     showError(phoneInput, "Phone number is required.");
     return false;
   }
-  // Strip spaces, dashes, plus for digit-count check
   const digits = val.replace(/[\s\-\+]/g, "");
   if (!/^\d+$/.test(digits)) {
     showError(phoneInput, "Phone must be numeric.");
@@ -160,8 +128,6 @@ function validateDob() {
   showSuccess(dobInput);
   return true;
 }
-
-/** validatePlan — at least one radio must be selected */
 function validatePlan() {
   const chosen = document.querySelector('input[name="plan"]:checked');
   // We attach error to the fieldset's legend area
@@ -180,8 +146,6 @@ function validatePlan() {
   }
   return true;
 }
-
-/** validateTerms — checkbox must be checked */
 function validateTerms() {
   const fieldset = termsCheckbox.closest("fieldset");
   const legend = fieldset.querySelector("legend");
@@ -197,12 +161,7 @@ function validateTerms() {
   }
   return true;
 }
-
-/**
- * validateForm — run all validators, return true only if ALL pass
- */
 function validateForm() {
-  // Run every validator so user sees ALL errors at once
   const results = [
     validateFullName(),
     validateEmail(),
@@ -214,10 +173,7 @@ function validateForm() {
   return results.every(Boolean);
 }
 
-/* ──────────────────────────────────────────────
-   MINI-CART / PLAN SELECTION (sessionStorage)
-   ────────────────────────────────────────────── */
-
+/*PLAN SELECTION  */
 /**
  * selectPlan — save plan key to sessionStorage and update UI
  * @param {string} planKey - "bronze" | "silver" | "gold"
@@ -227,15 +183,11 @@ function selectPlan(planKey) {
   renderMiniCart();
 }
 
-/** clearSelection — remove plan from session and hide mini-cart */
 function clearSelection() {
   sessionStorage.removeItem("selectedPlan");
   renderMiniCart();
 }
 
-/**
- * renderMiniCart — show/hide the sticky bar based on sessionStorage
- */
 function renderMiniCart() {
   const planKey = sessionStorage.getItem("selectedPlan");
   if (planKey && PLANS[planKey]) {
@@ -247,43 +199,28 @@ function renderMiniCart() {
     miniCart.classList.remove("visible");
   }
 }
-
-/**
- * prefillAndScroll — check the matching radio and scroll to form
- */
 function prefillAndScroll() {
   const planKey = sessionStorage.getItem("selectedPlan");
   if (planKey) {
-    const radio = document.querySelector(`input[name="plan"][value="${planKey}"]`);
+    const radio = document.querySelector(
+      `input[name="plan"][value="${planKey}"]`,
+    );
     if (radio) radio.checked = true;
   }
   document.getElementById("register").scrollIntoView({ behavior: "smooth" });
 }
 
-/* ──────────────────────────────────────────────
-   SUCCESS MODAL
-   ────────────────────────────────────────────── */
-
-/** openModal — show success confirmation */
+/*SUCCESS MODAL*/
 function openModal() {
   successModal.classList.add("visible");
   document.body.style.overflow = "hidden";
 }
-
-/** closeModal — hide the modal */
 function closeModal() {
   successModal.classList.remove("visible");
   document.body.style.overflow = "";
 }
 
-/* ──────────────────────────────────────────────
-   SAVE MEMBER TO localStorage (for admin dashboard)
-   ────────────────────────────────────────────── */
-
-/**
- * saveMember — persist the registration to localStorage
- * so the admin dashboard can read it later
- */
+/*SAVE MEMBER TO localStorage*/
 function saveMember() {
   const members = JSON.parse(localStorage.getItem("gymMembers") || "[]");
   const planKey = document.querySelector('input[name="plan"]:checked').value;
@@ -301,11 +238,7 @@ function saveMember() {
 
   localStorage.setItem("gymMembers", JSON.stringify(members));
 }
-
-/* ──────────────────────────────────────────────
-   INJECT HTML (mini-cart, "Select Plan" buttons, modal)
-   ────────────────────────────────────────────── */
-
+/*INJECT HTML */
 function injectDynamicHTML() {
   /* ── 1. Select Plan buttons on each article ── */
   const articles = document.querySelectorAll("#plans article");
@@ -346,29 +279,26 @@ function injectDynamicHTML() {
     </div>`;
   document.body.insertAdjacentHTML("beforeend", modalHTML);
 }
-
-/* ──────────────────────────────────────────────
-   INIT — wire everything up on DOMContentLoaded
-   ────────────────────────────────────────────── */
+/*INIT*/
 document.addEventListener("DOMContentLoaded", () => {
   /* Inject dynamic elements first */
   injectDynamicHTML();
 
   /* Cache DOM references */
-  form           = document.querySelector("#register form");
-  fullNameInput  = document.getElementById("full-name");
-  emailInput     = document.getElementById("email");
-  phoneInput     = document.getElementById("phone");
-  dobInput       = document.getElementById("dob");
-  planRadios     = document.querySelectorAll('input[name="plan"]');
-  termsCheckbox  = document.querySelector('input[name="terms"]');
-  miniCart       = document.getElementById("mini-cart");
-  cartPlanName   = document.getElementById("cart-plan-name");
-  cartPlanPrice  = document.getElementById("cart-plan-price");
+  form = document.querySelector("#register form");
+  fullNameInput = document.getElementById("full-name");
+  emailInput = document.getElementById("email");
+  phoneInput = document.getElementById("phone");
+  dobInput = document.getElementById("dob");
+  planRadios = document.querySelectorAll('input[name="plan"]');
+  termsCheckbox = document.querySelector('input[name="terms"]');
+  miniCart = document.getElementById("mini-cart");
+  cartPlanName = document.getElementById("cart-plan-name");
+  cartPlanPrice = document.getElementById("cart-plan-price");
   cartProceedBtn = document.getElementById("cart-proceed-btn");
-  cartClearBtn   = document.getElementById("cart-clear-btn");
-  successModal   = document.getElementById("success-modal");
-  modalCloseBtn  = document.getElementById("modal-close-btn");
+  cartClearBtn = document.getElementById("cart-clear-btn");
+  successModal = document.getElementById("success-modal");
+  modalCloseBtn = document.getElementById("modal-close-btn");
 
   /* ── Blur listeners for inline validation ── */
   fullNameInput.addEventListener("blur", validateFullName);
@@ -382,12 +312,12 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (validateForm()) {
-      saveMember();        // persist to localStorage
-      clearSelection();    // clear sessionStorage cart
-      form.reset();        // reset form fields
+      saveMember(); // persist to localStorage
+      clearSelection(); // clear sessionStorage cart
+      form.reset(); // reset form fields
       // Clear all green/red borders
       [fullNameInput, emailInput, phoneInput, dobInput].forEach(clearFeedback);
-      openModal();         // show success modal
+      openModal(); // show success modal
     }
   });
 

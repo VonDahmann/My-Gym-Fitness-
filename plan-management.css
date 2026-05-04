@@ -149,14 +149,38 @@ footer {
   padding: 2rem;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+/* RESPONSIVE */
+/* كود التجاوب - عندما تكون الشاشة أصغر من 768 بكسل */
+@media (max-width: 768px) {
+  
+  /* 1. جعل القائمة الجانبية والمحتوى فوق بعضهما */
   .admin-wrapper {
     flex-direction: column;
   }
+
+  /* 2. جعل القائمة الجانبية بعرض الشاشة كامل وطول تلقائي */
   .admin-sidebar {
     width: 100%;
+    min-width: 100%;
     height: auto;
-    position: relative;
+    border-right: none;
+    border-bottom: 2px solid var(--bg);
+  }
+
+  /* 3. جعل عناصر القائمة تظهر بجانب بعضها لتوفير المساحة */
+  .admin-sidebar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 4. أهم حركة للجداول: السماح بالتمرير الأفقي حتى لا يخرب التصميم */
+  main {
+    width: 100%;
+    overflow-x: auto; /* يظهر شريط تمرير للجدول إذا كان عريضاً */
+  }
+
+  table {
+    font-size: 0.8rem; /* تصغير الخط قليلاً في الموبايل */
   }
 }

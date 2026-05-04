@@ -160,3 +160,15 @@ footer {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  #payment ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #plans {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

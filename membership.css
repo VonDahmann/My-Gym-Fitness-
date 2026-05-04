@@ -357,20 +357,6 @@ button[type="submit"] {
   color: var(--primary);
   font-weight: bold;
 }
-
-/* RESPONSIVE */
-@media (min-width: 768px) {
-  #payment ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  #plans {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 /* ============================================================
    JS-DRIVEN STYLES — validation, mini-cart, modal
    ============================================================ */
@@ -537,4 +523,16 @@ button[type="submit"] {
 }
 .modal-ok-btn:hover {
   background: #ff7020;
+}
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  #payment ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #plans {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

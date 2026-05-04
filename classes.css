@@ -148,3 +148,15 @@ tbody tr:hover {
   background-color: var(--bg) !important;
   border: 2px solid var(--accent);
 }
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  #payment ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #plans {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
