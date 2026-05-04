@@ -12,20 +12,35 @@ const trainersData = [
     bio: "Sarah is a certified yoga instructor who combines traditional techniques with modern wellness approaches. She helps members improve flexibility, posture, and mental clarity.",
     email: "sarah@mygymfitness.com", photo: "images/sarah.jpg",
     schedule: [
-      { day: "Sunday", time: "08:00–09:15", className: "Morning Yoga" },
-      { day: "Tuesday", time: "18:00–19:15", className: "Power Yoga" },
-      { day: "Thursday", time: "08:00–09:15", className: "Gentle Yoga" },
+      { day: "Sunday",
+        time: "08:00–09:15",
+        className: "Morning Yoga"
+         },
+      { day: "Tuesday",
+         time: "18:00–19:15", className: "Power Yoga" },
+      { day: "Thursday",
+        time: "08:00–09:15",
+        className: "Gentle Yoga" },
     ],
   },
   {
-    id: 2, name: "Mohamed Cherif", specialty: "CrossFit & Functional Training",
+    id: 2, name: "Mohamed Cherif", 
+    specialty: "CrossFit & Functional Training",
     experience: "8 Years",
     bio: "Mohamed is an elite CrossFit coach and former national-level athlete. His high-intensity sessions are designed to push limits and build real-world strength and endurance.",
     email: "mohamed@mygymfitness.com", photo: "images/cc.jpg",
     schedule: [
-      { day: "Sunday", time: "17:00–17:45", className: "CrossFit WOD" },
-      { day: "Monday", time: "17:00–17:45", className: "CrossFit Basics" },
-      { day: "Wednesday", time: "17:00–17:45", className: "CrossFit WOD" },
+      { day: "Sunday",
+        time: "17:00–17:45",
+        className: "CrossFit WOD"  
+        },
+      { day: "Monday", 
+        time: "17:00–17:45", 
+        className: "CrossFit Basics"
+       },
+      { day: "Wednesday",
+        time: "17:00–17:45", 
+        className: "CrossFit WOD" },
     ],
   },
   {

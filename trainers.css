@@ -13,6 +13,7 @@ h4 {
 .tot {
   height: 90vh;
   width: 100%;
+  margin-bottom: -2rem;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://wallpaperbat.com/img/9706414-plank-position-at-gym.jpg);
@@ -29,7 +30,7 @@ h4 {
 .hh {
   font-size: 3rem;
   font-family: "Oswald", sans-serif;
-  margin-bottom: 1rem;
+  margin-bottom: 10rem;
   word-spacing: 1px;
   color: var(--bg);
 }
@@ -57,7 +58,7 @@ h4 {
 #trainers-grid {
   padding: 4rem 5%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   background-color: var(--primary);
 }
@@ -78,6 +79,8 @@ h4 {
   text-align: center;
   transition: 0.3s;
   border: 2px solid transparent;
+  max-width: 400px; /* يحدد أقصى عرض للبطاقة لمنعها من التمدد الزائد */
+  margin: 0 auto;
 }
 
 .trainer-card:hover {
@@ -169,11 +172,6 @@ h4 {
   font-family: "Oswald", sans-serif;
 }
 
-@media (max-width: 768px) {
-<<<<<<< HEAD
-    #trainers-intro h2 { font-size: 2.5rem; }
-    #trainers-grid { grid-template-columns: 1fr; }
-}
 
 /* ============================================================
    JS-DRIVEN STYLES — search bar, no-results, modal
@@ -182,8 +180,9 @@ h4 {
 /* ── Search bar ── */
 #trainer-search-wrapper {
   max-width: 600px;
-  margin: 2rem auto 0;
+  margin: 3rem auto 4rem;
   padding: 0 5%;
+  margin-bottom: -1.5rem;
 }
 #trainer-search {
   width: 100%;
@@ -316,12 +315,16 @@ h4 {
   text-decoration: none;
   font-weight: bold;
 }
-=======
-  #trainers-intro h2 {
-    font-size: 2.5rem;
-  }
-  #trainers-grid {
-    grid-template-columns: 1fr;
-  }
+  
+ /* Responsive*/
+@media (max-width: 1024px) {
+    #trainers-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
->>>>>>> 03d647a (add js)
+
+@media (max-width: 768px) {
+    #trainers-grid {
+        grid-template-columns: 1fr; 
+    }
+}
